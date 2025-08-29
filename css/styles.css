@@ -16,7 +16,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 40px; /* Reduce el padding para hacer el header más pequeño */
+    padding: 10px 40px; 
     background-color: rgb(255, 248, 237);
     border-bottom: 2px solid #f05a28;
     width: 100%;
@@ -44,6 +44,20 @@ nav a {
     font-weight: bold;
     font-size: 16px;
     padding: 5px 10px;
+}
+
+nav {
+    border-right: 2px solid #f05a28;
+}
+
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+.container { 
+    display: flex;
+
 }
 
 /* Main Content Styles */
