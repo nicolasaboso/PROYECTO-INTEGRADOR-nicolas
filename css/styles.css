@@ -7,15 +7,16 @@
 body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: rgb(255, 248, 237); /* fondo crema */
-  color: #333; /* tono más suave para el texto */
-  line-height: 1.5; /* mejora la legibilidad */
+  background: rgb(255, 248, 237); 
+  color: #333; 
+  
 }
 
 img {
   max-width: 100%;
   height: auto;
-  border: 1px solid #ddd; /* borde simple para las imágenes */
+
+  
 }
 
 /* ====== Header Styles ====== */
@@ -25,7 +26,7 @@ header {
   justify-content: space-between;
   padding: 10px 40px;
   background-color: rgb(255, 248, 237);
-  border-bottom: 2px solid #f05a28;
+  border-bottom: 2px solid #f05a28; /* Franja naranja */
   width: 100%;
 }
 
@@ -68,7 +69,7 @@ nav {
 }
 
 nav ul {
-  list-style: none;
+  list-style: none; 
   display: flex;
   align-items: center;
   gap: 20px;
@@ -87,7 +88,7 @@ nav a {
   border-radius: 4px;
   text-align: center;
   margin-left: 10px;
-  background-color: rgb(255, 248, 237); /* Default background color */
+  background-color: rgb(255, 248, 237); 
 }
 
 nav a.active {    /* REVIAR ESTO PORUAQE NO DEJAN USAR ESTE COMANDO PERO NOSE COMO HACERLO SINO  */
@@ -103,7 +104,6 @@ nav a.active {    /* REVIAR ESTO PORUAQE NO DEJAN USAR ESTE COMANDO PERO NOSE CO
   padding: 20px 30px; /* Aumenta el espacio a la derecha */
   width: 420px; /* Ajusta el ancho para dar más espacio */
   border-right: 2px solid #f05a28; /* Franja naranja para delimitar */
-  min-height: 100vh; /* Asegura que la franja llegue hasta el final de la página */
   box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
@@ -126,7 +126,7 @@ nav a.active {    /* REVIAR ESTO PORUAQE NO DEJAN USAR ESTE COMANDO PERO NOSE CO
   padding: 10px;
   display: block;
   border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
 
 .sidebar ul li a:hover {
@@ -158,9 +158,9 @@ section h2 {
 
 /* ====== Product Grid Styles ====== */
 .productos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 20px;       
 }
 
 .producto {
@@ -176,7 +176,7 @@ section h2 {
   justify-content: space-between;
 }
 
-.producto:hover {
+.producto:hover {                                     /* da un efecto hover a cada producto y que cuando pases el mouse por arriba se agrande */
   transform: scale(1.02);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -221,7 +221,7 @@ section h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+
   gap: 20px;
   padding: 16px;
 }
