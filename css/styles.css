@@ -1,171 +1,401 @@
-/* General Styles */
+/* ====== General Styles ====== */
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: rgb(255, 248, 237);
-    color: #004d40;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(255, 248, 237); /* fondo crema */
+  color: #333; /* tono más suave para el texto */
+  line-height: 1.5; /* mejora la legibilidad */
 }
 
-/* Header Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd; /* borde simple para las imágenes */
+}
 
-/* Header Styles */
+/* ====== Header Styles ====== */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 40px; 
-    background-color: rgb(255, 248, 237);
-    border-bottom: 2px solid #f05a28;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: rgb(255, 248, 237);
+  border-bottom: 2px solid #f05a28;
+  width: 100%;
 }
 
-/* Logo Styles */
-header h1 .logo {
-    margin-right: auto;
-    width: 290px;
-    height: 180x;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center; 
-    gap: 20px; 
-}
-
-.sidebar {
-    align-items: center;
-    padding: 20px;
-    width: 400px;
-}
-
-nav li {
-    margin: 0; 
-    width: auto;       
-}
-
-nav a {
-    text-decoration: none;
-    color: #004d40;
-    font-weight: bold;
-    font-size: 16px;
-   
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center; 
-    margin-left: 10px; 
-}
-
-nav a:hover {
-    color: #fff; 
-    background-color: #f05a28; 
+header div .logo {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 200px;
+  height: 150px;
 }
 
 nav {
-  border-right: 2px solid #f05a28;
-  padding-right: 80px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin-right: 40px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #f05a28;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  border-color: #004d40;
+}
+
+.search-button {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav li {
+  margin: 0;
+  width: auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004d40;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: 10px;
+  background-color: rgb(255, 248, 237); /* Default background color */
+}
+
+nav a.active {    /* REVIAR ESTO PORUAQE NO DEJAN USAR ESTE COMANDO PERO NOSE COMO HACERLO SINO  */
+  color: #fff;
+  background-color: #f05a28; /* Simulates hover effect */
+}
+
+/* ====== Sidebar Styles ====== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 30px; /* Aumenta el espacio a la derecha */
+  width: 420px; /* Ajusta el ancho para dar más espacio */
+  border-right: 2px solid #f05a28; /* Franja naranja para delimitar */
+  min-height: 100vh; /* Asegura que la franja llegue hasta el final de la página */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 .sidebar ul {
-    display: flex;
-    
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px; 
-}
-.category-list {
-    padding: 0; 
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
+.sidebar ul li {
+  width: 100%;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #004d40;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #f05a28;
+  color: #fff;
+}
+
+/* ====== Main Content Styles ====== */
 .container {
-    display: flex;
-    align-items: flex-start; 
-    gap: 30px;
-
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
 }
 
-
-/* Main Content Styles */
 main {
-    padding: 30px 40px;
-    width: 100%;
+  padding: 30px 40px;
+  width: 100%;
 }
 
 section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 section h2 {
-    font-size: 24px;
-    color: #f05a28;
-    margin-bottom: 20px;
+  font-size: 24px;
+  color: #f05a28;
+  margin-bottom: 20px;
 }
 
-/* Product Grid Styles */
+/* ====== Product Grid Styles ====== */
 .productos {
-    display: grid;
-  grid-template-columns: repeat(4, 1fr); /* especificar que sirve para que entren las 4 columnas porque es un contenido que no vimos  */
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-/* Product Box Styles */
 .producto {
-    background-color: #fff; 
-    border: 1px solid #ddd; 
-    border-radius: 4px;
-    padding: 15px;
-    text-align: left; 
-    width: 250px; 
-    height: 400px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: left;
+  width: 250px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .producto:hover {
-    transform: scale(1.02); /* Efecto de zoom al pasar el mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Product Image Styles */
 .producto img {
-    width: 100%; 
-    height: 200px; 
-    margin-bottom: 10px;
-    border-radius: 4px; 
-    object-fit: cover; /* ESPECIAL PARA QUE LA IMAGEN NO SE DEFORME */
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  object-fit: cover;
 }
 
-/* Product Title Styles */
 .producto h3 {
-    font-size: 16px;
-    color: #333; 
-    margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
 }
 
-/* Product Description Styles */
 .producto p {
-    font-size: 14px;
-    color: #666; 
-    margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-/* Price Styles */
 .producto p:nth-of-type(2) {
-    font-size: 18px;
-    color: #00a650; 
-    font-weight: bold;
+  font-size: 18px;
+  color: #00a650;
+  font-weight: bold;
 }
 
-/* Button Styles */
 .producto a {
-    display: inline-block;
-    color: #3483fa; 
-    font-weight: bold;
-    font-size: 14px;
-    margin-top: 10px;
+  display: inline-block;
+  color: #3483fa;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
 }
+
+/* ====== Login Page Styles ====== */
+.main-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 16px;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.logo-box img {
+  max-width: 140px;
+  height: auto;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 420px;
+  background: #004d40;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+
+.inicio-sesion {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.lol {
+  margin-bottom: 12px;
+}
+
+.email-input,
+.password-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  color: #004d40;
+  font-size: 15px;
+}
+
+.checkbox-container {
+  margin: 10px 0 14px;
+  font-size: 14px;
+  color: white;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #f05a28;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.link-register {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  color: #ffd7c7;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ====== Product Detail Styles ====== */
+.producto-detalle {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 15px;
+  padding: 20px;
+}
+
+.producto-info h2 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #f05a28;
+}
+
+.producto-info p {
+  font-size: 16px;
+  color: #004d40;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 22px;
+  color: #00a650;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* ====== Reviews Styles ====== */
+.reviews {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 15px;
+  padding: 20px;
+}
+
+.reviews h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #f05a28;
+}
+
+.review {
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.review:first-child {
+  border-top: none;
+}
+
+/* ====== Footer Styles ====== */
+footer {
+  background: #fff;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* ====== Search Results Styles ====== */
+
+.container1 {
+  font-size: 24px;
+  color: #f05a28;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+
+}
+.results {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.results h1 {
+  font-size: 28px;
+  color: #f05a28;
+  margin-bottom: 20px;
+}
+
+.no-results {
+  font-size: 18px;
+  color: #666;
+  font-style: italic;
+  padding: 10px;
+  background-color: #fef3f0;
+  border: 1px solid #f05a28;
+  border-radius: 6px;
+  display: inline-block;
+}
+

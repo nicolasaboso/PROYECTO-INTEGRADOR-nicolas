@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Búsqueda</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    
+     <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
+            </a>
+        </div>
+        <nav class="main-nav">
+            <form action="search-results.html" method="get" class="search-form">
+                <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
+                <button type="submit" class="search-button">Buscar</button>
+            </form>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+                <li><a href="register.html" class="nav-link">Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <div class="container">
+        <h1 class="container1">Resultados de tu busqueda:</h1>
+        <div class="results">
+            <!-- Mensaje cuando no hay resultados -->
+            <p class="no-results">No se han encontrado resultados relacionados al término buscado.</p>
+        </div>
+    </div>
+</body>
+</html>
