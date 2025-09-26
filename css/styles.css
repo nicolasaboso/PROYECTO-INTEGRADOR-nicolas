@@ -396,40 +396,56 @@ footer {
 
 
 
-/* ====== Responsive Styles ====== */
+/* ==================== Responsive hasta 768px ==================== */
 @media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    align-items: center;
-  }
-  .search-form {
-    margin: 10px 0;
-    width: 100%;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-  nav li {
-    width: 100%;
-  }
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 2px solid #f05a28;
-    padding: 10px 0;
-    margin-bottom: 20px;
-  }
-  .container {
-    flex-direction: column;
-    gap: 20px;
-  }
-  main {
-    padding: 20px;
-  }
-  .producto {
-    width: 100%;
-    height: auto;
-  }
-}   
+    
+    /* Header */
+    .main-header {
+        flex-direction: column;   
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .logo-container {
+        margin-bottom: 10px;
+    }
+
+    .search-form {
+        width: 70%;              
+        display: flex;
+        flex-direction: row;
+    }
+
+    .search-input {
+        flex: 1;
+        padding: 6px;            
+    }
+
+    .search-button {
+        padding: 6px 10px;
+    }
+
+    /* Navegación */
+    .main-nav ul {
+        flex-direction: column; 
+        gap: 10px;
+        padding: 0;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 8px;
+    }
+
+    /* Imágenes */
+    .producto img {
+        max-width: 100%;
+        height: auto;
+    }
+    .search-form {
+      width: 70px; 
+
+
+    }
+}
