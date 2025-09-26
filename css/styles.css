@@ -38,14 +38,14 @@ header div .logo {
 }
 
 nav {
-  flex: 1;
+  flex: 1; /* Hace que el ítem sea flexible en ambas direcciones (crecer o achicarse) */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .search-form {
-  flex: 1;
+  flex: 1;  /* Hace que el ítem sea flexible en ambas direcciones (crecer o achicarse) */
   display: flex;
   align-items: center;
   max-width: 600px;
@@ -53,7 +53,7 @@ nav {
 }
 
 .search-input {
-  flex: 1;
+  flex: 1;  /* Hace que el ítem sea flexible en ambas direcciones (crecer o achicarse) */
   padding: 10px;
   border: 2px solid #f05a28;
   border-radius: 4px;
@@ -186,7 +186,7 @@ section h2 {
   height: 200px;
   margin-bottom: 10px;
   border-radius: 4px;
-  object-fit: cover;
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
 }
 
 .producto h3 {
@@ -253,7 +253,7 @@ section h2 {
   margin-bottom: 12px;
 }
 
-.email-input,
+.email-input,           /* ambos input tienen la misma clase y asi uso ambos para que no tenga que repetirlo ambas veces*/
 .password-input {
   width: 100%;
   padding: 10px;
@@ -279,7 +279,7 @@ section h2 {
   color: white;
   font-weight: bold;
   font-size: 16px;
-  cursor: pointer;
+
 }
 
 .link-register {
@@ -373,7 +373,7 @@ footer {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sutil sombra para resaltar y que se note mejor el recuadro */
   text-align: center;
 }
 
