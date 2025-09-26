@@ -201,11 +201,6 @@ section h2 {
   margin-bottom: 10px;
 }
 
-.producto p:nth-of-type(2) {
-  font-size: 18px;
-  color: #00a650;
-  font-weight: bold;
-}
 
 .producto a {
   display: inline-block;
@@ -399,3 +394,42 @@ footer {
   display: inline-block;
 }
 
+
+
+/* ====== Responsive Styles ====== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+  }
+  .search-form {
+    margin: 10px 0;
+    width: 100%;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  nav li {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #f05a28;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  main {
+    padding: 20px;
+  }
+  .producto {
+    width: 100%;
+    height: auto;
+  }
+}   
