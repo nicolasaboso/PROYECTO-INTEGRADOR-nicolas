@@ -170,7 +170,7 @@ section h2 {
   padding: 15px;
   text-align: left;
   width: 250px;
-  height: 400px;
+  height: 450px; /* Increased height to allow more space for text */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -200,7 +200,6 @@ section h2 {
   color: #666;
   margin-bottom: 10px;
 }
-
 
 .producto a {
   display: inline-block;
