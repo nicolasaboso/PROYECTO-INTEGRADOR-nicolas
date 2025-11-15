@@ -20,6 +20,32 @@ formulario.addEventListener('submit', function(e){
     this.submit();
 });
 
+// PUNTO 3 --- MENÚ VERTICAL DE CATEGORÍAS //
+
+let listaCategorias = document.querySelector('.category-list');
+let urlCategorias = "https://dummyjson.com/products/category-list";
+
+fetch(urlCategorias)
+    .then(function(respuesta){
+        return respuesta.json();
+    })
+    .then(function(data){
+    
+        for (let i = 0; i < data.length; i++) {
+            let categoria = data[i];
+
+            listaCategorias.innerHTML += `
+                <li>
+                    <a href="./category.html?category=${categoria}">
+                        ${categoria}
+                    </a>
+                </li>
+            `;
+        }
+    })
+    .catch(function(error){
+        console.log(error);
+    });
 
 
 

@@ -21,87 +21,64 @@ formulario.addEventListener('submit', function(e){
 });
 
 
+/// PUNTO 3 --- MENÚ VERTICAL DE CATEGORÍAS //
+
+let listaCategorias = document.querySelector('.category-list');
+let urlCategorias = "https://dummyjson.com/products/category-list";
+
+fetch(urlCategorias)
+    .then(function(respuesta){
+        return respuesta.json();
+    })
+    .then(function(data){
+       
+        for (let i = 0; i < data.length; i++) {
+            let categoria = data[i];
+
+            listaCategorias.innerHTML += `
+                <li>
+                    <a href="./category.html?category=${categoria}">
+                        ${categoria}
+                    </a>
+                </li>
+            `;
+        }
+    })
+    .catch(function(error){
+        console.log(error);
+    });
 
 
+// PUNTO 4 --- HOME: PRODUCTOS DESDE API //
 
+let destacados  = document.querySelector('#productos-aleatorios .productos');
+let masVendidos = document.querySelector('#productos-mas-vendidos .productos');
 
+function cargar(nombreCategoria, contenedor) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// URL base de la API
-const BASE_URL = "https://dummyjson.com/products";
-
-// 1) Capturamos los contenedores donde vamos a inyectar los productos
-const destacadosContainer = document.querySelector("#productos-aleatorios .productos");
-const masVendidosContainer = document.querySelector("#productos-mas-vendidos .productos");
-
-// 2) Función general para traer productos de una categoría y mostrarlos en pantalla
-function cargarProductosPorCategoria(nombreCategoria, contenedor) {
-    // Armamos la URL para esa categoría
-    const url = BASE_URL + "/category/" + nombreCategoria;
-
-    // Pedimos los datos a la API
-    fetch(url)
-        .then(function (response) {
-            // Pasamos la respuesta a JSON
-            return response.json();
+    fetch('https://dummyjson.com/products/category/' + nombreCategoria)
+        .then(function(res) {
+            return res.json();
         })
-        .then(function (data) {
-            // "data.products" es un array con los productos
-            const productos = data.products;
+        .then(function(data) {
 
-            // Vamos a ir armando un solo string con todo el HTML
-            let html = "";
+            contenedor.innerHTML = '';
 
-            // Definimos cuántos productos queremos mostrar (máximo 10)
-            let limite = 10;
-            if (productos.length < 10) {
-                limite = productos.length;
+            for (let i = 0; i < 10; i++) {
+                let p = data.products[i];
+
+                contenedor.innerHTML += `
+                    <article class="producto">
+                        <img src="${p.thumbnail}" alt="${p.title}">
+                        <h3>${p.title}</h3>
+                        <p>${p.description}</p>
+                        <p>$ ${p.price}</p>
+                        <a href="./product.html?id=${p.id}">ver detalle</a>
+                    </article>
+                `;
             }
-
-            // Recorremos el array de productos
-            for (let i = 0; i < limite; i++) {
-                const producto = productos[i];
-
-                // Por cada producto armamos una "card" de HTML
-                html +=
-                    '<article class="producto">' +
-                        '<img src="' + producto.thumbnail + '" alt="' + producto.title + '">' +
-                        '<h3>' + producto.title + '</h3>' +
-                        '<p class="descripcion">' + producto.description + '</p>' +
-                        '<p class="precio">$ ' + producto.price + '</p>' +
-                        // Link al detalle del producto con query string ?id=
-                        '<a href="./product.html?id=' + producto.id + '" class="btn-detalle">Ver detalle</a>' +
-                    '</article>';
-            }
-
-            // Inyectamos todo el HTML junto en el contenedor
-            contenedor.innerHTML = html;
-        })
-        .catch(function (error) {
-            // Si algo falla, lo vemos en la consola
-            console.log("Error al traer los productos: ", error);
         });
 }
 
-// 3) Llamamos a la función para cada sección de la home
-
-// Sección "Productos destacados" -> categoría "smartphones"
-cargarProductosPorCategoria("smartphones", destacadosContainer);
-
-// Sección "Más vendidos" -> categoría "laptops"
-cargarProductosPorCategoria("laptops", masVendidosContainer);
+cargar('smartphones', destacados);
+cargar('laptops', masVendidos);
