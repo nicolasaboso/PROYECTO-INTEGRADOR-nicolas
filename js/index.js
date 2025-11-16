@@ -64,19 +64,19 @@ function cargar(nombreCategoria, contenedor) {
 
             contenedor.innerHTML = '';
 
-            for (let i = 0; i < 10; i++) {
-                let p = data.products[i];
+          for (let i = 0; i < data.products.length && i < 10; i++) {
+            let p = data.products[i];
 
-                contenedor.innerHTML += `
-                    <article class="producto">
-                        <img src="${p.thumbnail}" alt="${p.title}">
-                        <h3>${p.title}</h3>
-                        <p>${p.description}</p>
-                        <p>$ ${p.price}</p>
-                        <a href="./product.html?id=${p.id}">ver detalle</a>
-                    </article>
-                `;
-            }
+            contenedor.innerHTML += `
+                <article class="producto">
+                    <img src="${p.thumbnail}" alt="${p.title}">
+                    <h3>${p.title}</h3>
+                    <p>${p.description}</p>
+                    <p>$ ${p.price}</p>
+                    <a href="./product.html?id=${p.id}">ver detalle</a>
+                </article>
+        `;
+    }
         });
 }
 

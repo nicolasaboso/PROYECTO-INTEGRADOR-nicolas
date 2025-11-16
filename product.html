@@ -7,70 +7,55 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-
-  <!-- Header con tu versión -->
   <header class="main-header">
-        <div class="logo-container">
-            <a href="./index.html">
-                <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
-            </a>
-        </div>
-         <form action="./search-results.html" method="get" class="search-form">
-                <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
-                <button type="submit" class="search-button">Buscar</button>
-            </form>
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
-                <li><a href="./login.html" class="nav-link">Login</a></li>
-                <li><a href="./register.html" class="nav-link">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="logo-container">
+      <a href="./index.html">
+        <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
+      </a>
+    </div>
 
-  <!-- Contenido principal -->
+    <form action="./search-results.html" method="get" class="search-form">
+      <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
+      <button type="submit" class="search-button">Buscar</button>
+    </form>
+
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="./index.html" class="nav-link">Home</a></li>
+        <li><a href="./login.html" class="nav-link">Login</a></li>
+        <li><a href="./register.html" class="nav-link">Registro</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <!-- Detalle del producto -->
     <section class="producto-detalle">
       <div class="producto-foto">
-        <img src="./img/bmw135.webp" alt="bmw135">
+        <img id="product-image" src="" alt="">
       </div>
-
       <div class="producto-info">
-        <h2 class="nombre">BMW 135</h2>
-        <p><strong>Marca:</strong> BMW</p>
-        <p><strong>Descripción:</strong> El BMW Serie 1 es la combinación perfecta de diseño deportivo, tecnología de vanguardia y un rendimiento que te dejará sin aliento.</p>
-        <p><strong>Precio:</strong> $45,000</p>
-        <p><strong>Categoría:</strong> Automóviles</p>
-        <p><strong>Stock:</strong> ¡Disponible ahora! Solo 2 unidades listas para ser tuyas.</p>
-        <p><strong>Tags:</strong> #BMW, #Serie1, #Deportivo</p>
+        <h2 id="product-title" class="nombre"></h2>
+        <p><strong>Marca:</strong> <span id="product-brand"></span></p>
+        <p><strong>Descripción:</strong> <span id="product-description"></span></p>
+        <p><strong>Precio:</strong> <span id="product-price"></span></p>
+        <p><strong>Categoría:</strong> 
+          <a id="product-category" href="#"></a>
+        </p>
+        <p><strong>Stock:</strong> <span id="product-stock"></span></p>
+        <p><strong>Tags:</strong></p>
+        <ul id="product-tags"></ul>
       </div>
     </section>
-
-    <!-- Sección de reviews -->
     <section class="reviews">
       <h3>Opiniones de usuarios</h3>
-
-      <div class="review">
-        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-        <p><strong>Comentario:</strong> Excelente auto, el diseño es impresionante y el rendimiento en carretera es inigualable. ¡Totalmente recomendado!</p>
-        <p><strong>Fecha:</strong> 05/09/2025</p>
-        <p><strong>Usuario:</strong> Juan Pérez</p>
-      </div>
-
-      <div class="review">
-        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
-        <p><strong>Comentario:</strong> El BMW Serie 1 es una maravilla. La conducción es suave y el interior es muy cómodo. Sin duda, una gran compra.</p>
-        <p><strong>Fecha:</strong> 02/09/2025</p>
-        <p><strong>Usuario:</strong> Ana López</p>
-      </div>
+      <div id="reviews-container"></div>
     </section>
   </main>
-
-  <!-- Footer simple -->
   <footer>
-        <p> 2025 Nuestra Tienda. Todos los derechos reservados.</p>
-        <p>Owner: Nicolas Rocco Aboso</p>
-    </footer>
+      <p> 2025 Nuestra Tienda. Todos los derechos reservados.</p>
+      <p>Owner: Nicolas Rocco Aboso</p>
+  </footer>
+
+  <script src="./js/product.js"></script>
+
 </body>
 </html>
