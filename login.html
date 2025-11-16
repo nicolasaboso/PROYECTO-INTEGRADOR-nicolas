@@ -7,51 +7,68 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
+
    <header class="main-header">
-        <div class="logo-container">
-            <a href="./index.html">
-                <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
-            </a>
-        </div>
-         <form action="./search-results.html" method="get" class="search-form">
-                <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
-                <button type="submit" class="search-button">Buscar</button>
-            </form>
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
-                <li><a href="./login.html" class="nav-link">Login</a></li>
-                <li><a href="./register.html" class="nav-link">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="logo-container">
+        <a href="./index.html">
+            <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
+        </a>
+    </div>
 
-  <div class="logo-box">
-    <img src="./img/dutchify logo.png" alt="Logo dutchify">
-  </div>
-
-  <main class="main-login">
-    <form class="formulario" action="./index.html" method="GET">
-      <h2 class="inicio-sesion">Login</h2>
-
-      <div class="lol">
-        <label for="email">Email</label>
-        <input class="email-input" type="email" name="email" id="email" value="">
-      </div>
-
-      <div class="lol">
-        <label for="password">Contraseña</label>
-        <input class="password-input" type="password" id="password" name="password">
-      </div>
-
-      <button class="button" type="submit">Iniciar Sesión</button>
-      <a class="link-register" href="./register.html">No tengo cuenta</a>
+    <form action="./search-results.html" method="get" class="search-form">
+        <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
+        <button type="submit" class="search-button">Buscar</button>
     </form>
-  </main>
 
-  <footer>
-    <p> 2025 Nuestra Tienda. Todos los derechos reservados.</p>
-    <p>Owner: Nicolas Rocco Aboso</p>
-  </footer>
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+
+            <!-- Login + Registro (ID EN EL LI) -->
+            <li id="item-login">
+                <a href="./login.html" class="nav-link">Login</a>
+            </li>
+
+            <li id="item-register">
+                <a href="./register.html" class="nav-link">Registro</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+    <div class="logo-box">
+        <img src="./img/dutchify logo.png" alt="Logo dutchify">
+    </div>
+
+    <main class="main-login">
+        <!-- importante: class .formulario e ids #email y #password -->
+        <form class="formulario" action="./index.html" method="GET">
+            <h2 class="inicio-sesion">Login</h2>
+
+            <div class="lol">
+                <label for="email">Email</label>
+                <input class="email-input" type="email" name="email" id="email" value="">
+            </div>
+
+            <div class="lol">
+                <label for="password">Contraseña</label>
+                <input class="password-input" type="password" id="password" name="password">
+            </div>
+
+            <button class="button" type="submit">Iniciar Sesión</button>
+            <a class="link-register" href="./register.html">No tengo cuenta</a>
+        </form>
+    </main>
+
+    <footer>
+        <p> 2025 Nuestra Tienda. Todos los derechos reservados.</p>
+        <p>Owner: Nicolas Rocco Aboso</p>
+    </footer>
+
+    <script src="./js/saludo.js"></script>
+    <!-- 7.a: validación de login -->
+    <script src="./js/login.js"></script>
 </body>
 </html>
+

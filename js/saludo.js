@@ -1,21 +1,24 @@
-// PUNTO 2 --- HEADER Y FOOTER //
+// PUNTO 7 b --- SALUDO //
+
+let emailUsuario = localStorage.getItem('emailUsuario');
+
+let navLinks = document.querySelector('.nav-links');
+let itemLogin = document.querySelector('#item-login');
+let itemRegister = document.querySelector('#item-register');
+
+if (emailUsuario !== null) {
+
+    // Ocultamos login y registro
+    itemLogin.style.display = 'none';
+    itemRegister.style.display = 'none';
+
+    // Agregamos saludo y logout
+    navLinks.innerHTML += `
+        <li>
+            <span>Bienvenido: ${emailUsuario}</span>
+            <a href="#" id="link-logout">logout</a>
+        </li>
+    `;
+}
 
 
-
-let formulario = document.querySelector('.search-form');
-let inputBusqueda = document.querySelector('.search-input');
-
-formulario.addEventListener('submit', function(e){
-
-    e.preventDefault();
-
-    if(inputBusqueda.value === ""){
-        return alert("El campo de búsqueda no puede estar vacío");
-    } 
-    if(inputBusqueda.value.length < 3){
-        return alert("El término debe tener al menos 3 caracteres");
-    } 
-    
-    localStorage.setItem("ultimaBusqueda", inputBusqueda.value);
-    this.submit();
-});

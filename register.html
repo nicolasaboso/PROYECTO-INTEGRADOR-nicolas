@@ -7,24 +7,38 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-   <header class="main-header">
-        <div class="logo-container">
-            <a href="./index.html">
-                <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
-            </a>
-        </div>
-         <form action="./search-results.html" method="get" class="search-form">
-                <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
-                <button type="submit" class="search-button">Buscar</button>
-            </form>
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li><a href="./index.html" class="nav-link">Home</a></li>
-                <li><a href="./login.html" class="nav-link">Login</a></li>
-                <li><a href="./register.html" class="nav-link">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<header class="main-header">
+    <div class="logo-container">
+        <a href="./index.html">
+            <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
+        </a>
+    </div>
+
+    <form action="./search-results.html" method="get" class="search-form">
+        <input type="search" name="q" placeholder="Buscar productos..." class="search-input">
+        <button type="submit" class="search-button">Buscar</button>
+    </form>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+
+            <!-- Login + Registro (ID EN EL LI) -->
+            <li id="item-login">
+                <a href="./login.html" class="nav-link">Login</a>
+            </li>
+
+            <li id="item-register">
+                <a href="./register.html" class="nav-link">Registro</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+
+
 
   <div class="logo-box">
     <img src="./img/dutchify logo.png" alt="Logo dutchify">
@@ -54,9 +68,12 @@
     </form>
   </main>
 
+    
+
   <footer>
     <p> 2025 Nuestra Tienda. Todos los derechos reservados.</p>
     <p>Owner: Nicolas Rocco Aboso</p>
   </footer>
+  <script src="./js/saludo.js"></script>
 </body>
 </html>
