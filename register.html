@@ -24,7 +24,7 @@
         <ul class="nav-links">
             <li><a href="./index.html" class="nav-link">Home</a></li>
 
-            <!-- Login + Registro (ID EN EL LI) -->
+            <!-- Login + Registro -->
             <li id="item-login">
                 <a href="./login.html" class="nav-link">Login</a>
             </li>
@@ -36,44 +36,50 @@
     </nav>
 </header>
 
-
-
-
-
-  <div class="logo-box">
+<div class="logo-box">
     <img src="./img/dutchify logo.png" alt="Logo dutchify">
-  </div>
+</div>
 
-  <main class="main-login">
-    <form class="formulario" action="./index.html" method="GET">
-      <h2 class="inicio-sesion">Registrarse</h2>
+<main class="main-login">
+    <form class="formulario" action="./login.html" method="GET">
+        <h2 class="inicio-sesion">Registrarse</h2>
 
-      <div class="lol">
-        <label for="email">Email</label>
-        <input class="email-input" type="email" name="email" id="email" value="">
-      </div>
+        <div class="lol">
+            <label for="email">Email</label>
+            <input class="email-input" type="email" name="email" id="email" value="">
+        </div>
 
-      <div class="lol">
-        <label for="password">Contraseña</label>
-        <input class="password-input" type="password" id="password" name="password" value="">
-      </div>
+        <div class="lol">
+            <label for="password">Contraseña</label>
+            <input class="password-input" type="password" id="password" name="password" value="">
+        </div>
 
-      <div class="checkbox-container">
-        <input type="checkbox" id="terminos" name="terminos" required>
-        <label for="terminos">Acepto los términos y condiciones</label>
-      </div>
+        <div class="lol">
+            <label for="password2">Repetir contraseña</label>
+            <input class="password-input" type="password" id="password2" name="password2" value="">
+        </div>
 
-      <button class="button" type="submit">Registrarse</button>
-      <a class="link-register" href="./login.html">Iniciar sesión</a>
+        <div class="checkbox-container">
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Acepto los términos y condiciones</label>
+        </div>
+
+        <button class="button" type="submit">Registrarse</button>
+
+        <!-- Mensaje de error simple -->
+        <p id="mensaje-error" class="mensaje-error"></p>
+
+        <a class="link-register" href="./login.html">Iniciar sesión</a>
     </form>
-  </main>
+</main>
 
-    
-
-  <footer>
-    <p> 2025 Nuestra Tienda. Todos los derechos reservados.</p>
+<footer>
+    <p>2025 Nuestra Tienda. Todos los derechos reservados.</p>
     <p>Owner: Nicolas Rocco Aboso</p>
-  </footer>
-  <script src="./js/saludo.js"></script>
+</footer>
+
+<script src="./js/saludo.js"></script>
+<script src="./js/logout.js"></script>
+<script src="./js/register.js"></script>
 </body>
 </html>

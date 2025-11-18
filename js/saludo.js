@@ -13,12 +13,13 @@ if (emailUsuario !== null) {
     itemRegister.style.display = 'none';
 
     // Agregamos saludo y logout
-    navLinks.innerHTML += `
-        <li>
+   navLinks.innerHTML += `
+        <li id="item-usuario">
             <span>Bienvenido: ${emailUsuario}</span>
             <a href="#" id="link-logout">logout</a>
         </li>
     `;
+
 }
 
 

@@ -3,25 +3,29 @@
 let formularioLogin = document.querySelector('.formulario');
 let inputEmail = document.querySelector('#email');
 let inputPassword = document.querySelector('#password');
+let mensajeError = document.querySelector('#mensaje-error');
 
 formularioLogin.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    // Limpiar mensaje de error
+    mensajeError.innerText = '';
+
     // Email obligatorio
     if (inputEmail.value === '') {
-        alert('El email es obligatorio');
+        mensajeError.innerText = 'El email es obligatorio';
         return;
     }
 
     // Contraseña obligatoria
     if (inputPassword.value === '') {
-        alert('La contraseña es obligatoria');
+        mensajeError.innerText = 'La contraseña es obligatoria';
         return;
     }
 
     // Contraseña mínimo 6 caracteres
     if (inputPassword.value.length < 6) {
-        alert('La contraseña debe tener al menos 6 caracteres');
+        mensajeError.innerText = 'La contraseña debe tener al menos 6 caracteres';
         return;
     }
 

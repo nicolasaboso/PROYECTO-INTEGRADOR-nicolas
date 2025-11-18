@@ -354,43 +354,82 @@ footer {
   color: #555;
 }
 
-
 /* ====== Search Results Styles ====== */
 
+/* Título "Resultados de búsqueda para: XXX" */
 .container1 {
   font-size: 24px;
   color: #f05a28;
-  margin-bottom: 10px;
-  margin-top: 50px;
-  margin-right: 30px;
-  margin-left: 30px;
-
+  margin: 40px 40px 20px 40px;
 }
-.results {
-  margin-top: 20px;
-  padding: 20px;
+
+/* Contenedor de los productos del search */
+.lista-resultados {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 40px 40px 40px;
+}
+
+/* Cada resultado (si tu JS crea <article class="producto">, esto lo refuerza; si no, igual se ve bien) */
+.lista-resultados article {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sutil sombra para resaltar y que se note mejor el recuadro */
-  text-align: center;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: left;
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.2s;
 }
 
-.results h1 {
-  font-size: 28px;
-  color: #f05a28;
-  margin-bottom: 20px;
+.lista-resultados article:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.no-results {
-  font-size: 18px;
+.lista-resultados article img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.lista-resultados article h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.lista-resultados article p {
+  font-size: 14px;
   color: #666;
-  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.lista-resultados article a {
+  display: inline-block;
+  color: #3483fa;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Mensaje “No hay resultados para: XXX” */
+.no-results {
+  display: inline-block;
   padding: 10px;
+  font-size: 16px;
   background-color: #fef3f0;
   border: 1px solid #f05a28;
-  border-radius: 6px;
-  display: inline-block;
+  border-radius: 4px;
+  color: #666;
+  font-style: italic;
+  margin: 20px 40px;
 }
 
 
@@ -400,7 +439,7 @@ footer {
     
     /* Header */
     .main-header {
-        flex-direction: column;   
+        flex-direction: column;  
         align-items: center;
         text-align: center;
         gap: 15px;

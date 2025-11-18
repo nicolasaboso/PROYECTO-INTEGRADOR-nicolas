@@ -8,7 +8,7 @@
 </head>
 <body>
     
-    <header class="main-header">
+<header class="main-header">
     <div class="logo-container">
         <a href="./index.html">
             <img src="./img/Dutchify y slogan.png" alt="Dutchify Logo" class="logo">
@@ -24,7 +24,7 @@
         <ul class="nav-links">
             <li><a href="./index.html" class="nav-link">Home</a></li>
 
-            <!-- Login + Registro (ID EN EL LI) -->
+            <!-- Login + Registro -->
             <li id="item-login">
                 <a href="./login.html" class="nav-link">Login</a>
             </li>
@@ -36,23 +36,25 @@
     </nav>
 </header>
 
-
-
-    
-
-    <div class="container">
-        <h1 class="container1">Resultados de tu busqueda:</h1>
-        <div class="results">
-            <!-- Mensaje cuando no hay resultados -->
-            <p class="no-results">No se han encontrado resultados relacionados al término buscado.</p>
-        </div>
+<div class="container">
+    <!-- Título dinámico -->
+    <h1 class="container1 titulo-resultados"></h1>
+    <!-- Contenido de resultados -->
+    <div class="results lista-resultados">
+        <!-- JS insertará productos acá -->
     </div>
+    <!-- Mensaje si no hay resultados -->
+    <p class="no-results" style="display:none;"></p>
+</div>
+<footer>
+    <p>2025 Nuestra Tienda. Todos los derechos reservados.</p>
+    <p>Owner: Nicolas Rocco Aboso</p>
+</footer>
 
-    <footer>
-        <p>2025 Nuestra Tienda. Todos los derechos reservados.</p>
-        <p>Owner: Nicolas Rocco Aboso</p>
-    </footer>
-    <script src="./js/search.results.js"></script>
-    <script src="./js/saludo.js"></script>
+<!-- Scripts -->
+<script src="./js/search.results.js"></script>
+<script src="./js/saludo.js"></script>
+<script src="./js/logout.js"></script>
+
 </body>
 </html>
