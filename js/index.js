@@ -1,7 +1,5 @@
 // PUNTO 2 --- HEADER Y FOOTER //
 
-
-
 let formulario = document.querySelector('.search-form');
 let inputBusqueda = document.querySelector('.search-input');
 
