@@ -22,7 +22,6 @@ formulario.addEventListener('submit', function(e){
 
 // PUNTO 9 --- REGISTER: VALIDACIÓN DE FORMULARIO //
 
-// PUNTO 9 - Validación del registro //
 
 let formularioRegistro = document.querySelector('.formulario');
 let inputEmail = document.querySelector('#email');
@@ -33,46 +32,36 @@ let mensajeError = document.querySelector('#mensaje-error');
 
 formularioRegistro.addEventListener('submit', function (e) {
     e.preventDefault();
-
-    // Limpiar el mensaje de error
     mensajeError.innerText = '';
 
-    // Email obligatorio
     if (inputEmail.value === '') {
         mensajeError.innerText = 'El email es obligatorio';
         return;
     }
 
-    // Contraseña obligatoria
     if (inputPassword.value === '') {
         mensajeError.innerText = 'La contraseña es obligatoria';
         return;
     }
 
-    // Contraseña mínimo 6 caracteres
     if (inputPassword.value.length < 6) {
         mensajeError.innerText = 'La contraseña debe tener al menos 6 caracteres';
         return;
     }
 
-    // Repetir contraseña obligatorio
     if (inputPassword2.value === '') {
         mensajeError.innerText = 'Debes repetir la contraseña';
         return;
     }
 
-    // Coincidencia de contraseñas
     if (inputPassword.value !== inputPassword2.value) {
         mensajeError.innerText = 'Las contraseñas no coinciden';
         return;
     }
 
-    // Aceptar términos
     if (!inputTerminos.checked) {
         mensajeError.innerText = 'Debes aceptar los términos y condiciones';
         return;
     }
-
-    // Si todo está OK → redirigir al login
     location.href = './login.html';
 });

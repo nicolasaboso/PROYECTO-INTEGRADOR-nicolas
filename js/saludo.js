@@ -8,11 +8,9 @@ let itemRegister = document.querySelector('#item-register');
 
 if (emailUsuario !== null) {
 
-    // Ocultamos login y registro
     itemLogin.style.display = 'none';
     itemRegister.style.display = 'none';
 
-    // Agregamos saludo y logout
    navLinks.innerHTML += `
         <li id="item-usuario">
             <span>Bienvenido: ${emailUsuario}</span>
